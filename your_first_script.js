@@ -35,7 +35,7 @@ var firstThreeWords = allWords.slice(0, 3);
 var middleWords = allWords.slice(2, 5);
 var makeSentence = middleWords.join(" ");
 sentenceNode.innerText = makeSentence;
- */ 
 var favoriteColor = prompt("What is your favorite color?");
 var customInputNode = document.getElementById("customInput");
 customInputNode.innerText = favoriteColor;
+ */ 
