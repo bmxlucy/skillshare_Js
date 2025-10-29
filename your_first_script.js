@@ -37,5 +37,13 @@ var makeSentence = middleWords.join(" ");
 sentenceNode.innerText = makeSentence;
 var favoriteColor = prompt("What is your favorite color?");
 var customInputNode = document.getElementById("customInput");
+favoriteColor = favoriteColor.toLowerCase();
 customInputNode.innerText = favoriteColor;
  */ 
+var myname = prompt("What is your name?");
+var welcomeNode = document.getElementById("welcome");
+if (myname.toLowerCase() == "artem") {
+    welcomeNode.innerText = "Hello, Artem!";
+} else {
+    welcomeNode.innerText = "Hello, stranger!";
+}
