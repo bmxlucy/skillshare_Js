@@ -37,5 +37,28 @@ var makeSentence = middleWords.join(" ");
 sentenceNode.innerText = makeSentence;
 var favoriteColor = prompt("What is your favorite color?");
 var customInputNode = document.getElementById("customInput");
+favoriteColor = favoriteColor.toLowerCase();
 customInputNode.innerText = favoriteColor;
- */ 
+var myname = prompt("What is your name?");
+var welcomeNode = document.getElementById("welcome");
+if (myname.toLowerCase() == "artem") {
+    welcomeNode.innerText = "Hello, Artem!";
+} else {
+    welcomeNode.innerText = "Hello, stranger!";
+}
+var headline = document.getElementById("welcome");    
+var input = prompt("What course are you taking?")
+var inputLower = input.toLowerCase();
+if (inputLower == "javascript") {
+    headline.innerText = "You are taking the JavaScript course!";
+} else {
+    headline.innerText = "You are taking a different course."; 
+}
+var url = prompt("Enter a URL:");
+var httpNode = url.slice(0, 4);
+if (httpNode != "http") {
+    url = "http://" + url;
+}
+var headline = document.getElementById("welcome");
+headline.innerHTML = url;
+*/
