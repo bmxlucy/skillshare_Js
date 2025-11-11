@@ -62,4 +62,4 @@ if (httpNode != "http") {
 var headline = document.getElementById("welcome");
 headline.innerHTML = url;
 */
-LAST UPDATE
+LAST UPDATE 
