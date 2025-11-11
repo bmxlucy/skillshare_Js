@@ -61,5 +61,57 @@ if (httpNode != "http") {
 }
 var headline = document.getElementById("welcome");
 headline.innerHTML = url;
+
+var Myname = "Kalob";
+
+if(Myname == "Kalob") {
+ console.log('Welcome back, Kalob!');  
+} else if (Myname == "Artem") {
+ console.log('Hello, Artem!');          
+} else if (Myname == "John") {
+ console.log('Hi, John!');          
+} else {
+ console.log('Hello, stranger!');          
+}
+
+switch (Myname) {
+    case "Kalob":
+        console.log('Welcome back, Kalob!');
+        break;
+    case "Artem":
+        console.log('Hello, Artem!');
+        break;
+    case "John":
+        console.log('Hi, John!');
+        break;
+    default:
+        console.log('Hello, stranger!');
+}
+
+num1 = 100;
+num2 = 33.5;
+sum = num1 / num2;
+console.log(sum);
+
+var isCat = true;
+if (isCat) {
+    console.log('This is a cat.');
+} else {
+    console.log('This is not a cat.');
+}
+var CatName = prompt("What is your cat's name?");
+
+if (CatName.toLowerCase() == "misty") {
+    var isCat;
+} else {
+    var isCat = false;
+}
+if(!isCat) {
+    console.log('This is not Misty.');
+}
+if(isCat != true) {
+    console.log('This is not a cat.');
+}
+var isCat = 1;
+var isDog = 0;
 */
-LAST UPDATE 
