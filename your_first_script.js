@@ -114,4 +114,9 @@ if(isCat != true) {
 }
 var isCat = 1;
 var isDog = 0;
+
+names = ["Artem", "Kalob", "John", "Jane"];
+nums = Array(10, 20, 30, 40, 50);
+names.push("Mary");
+mary = names.pop();
 */
