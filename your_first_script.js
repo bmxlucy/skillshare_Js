@@ -119,4 +119,133 @@ names = ["Artem", "Kalob", "John", "Jane"];
 nums = Array(10, 20, 30, 40, 50);
 names.push("Mary");
 mary = names.pop();
+
+var age = 30;
+age = Number(age);
+if(age) {
+  console.log("You have a proper number")
+  if(age >= 18) {
+    console.log("You can vote!")
+  }
+}
+console.log(typeof(age));
+age = String(age);
+
+var isCat = "true";
+isCat = Boolean(isCat);
+var course = "JS for Beginners";
+course = Array(course)
+
+var course = "js"
+if(course != "php") {
+  console.log("Is a JS course!")
+}
+var age = 17;
+
+var personAge = prompt("what is your age");
+personAge = Number(personAge);
+
+if (!isNaN(personAge)) {
+  if (personAge >= 18) {
+    document.getElementById("welcome").innerText = "You are Adult"
+  }
+}
+
+function greeting(name, age) {
+  console.log("Hello " + name + " " + age + " years old");
+  return "SpaceX"
+}
+greeting("Artem", 32);
+var varName = greeting();
+
+
+function doMath(num) {
+  num = Number(num);
+  if(num) {
+    var newNumber = (num + 100) / 3
+    return newNumber;
+  } else {
+    return false;
+  }
+}
+var customNum = doMath(343);
+console.log(customNum)
+
+
+function $(id) {
+  return document.getElementById(id)
+}
+
+var title = $("title")
+title.innerText = "Custom unner text"
+
+function cToF(c_num) {
+  var fahrenheit = (c_num * 1.8) + 32;
+  return fahrenheit
+}
+
+var zero = cToF(0) 
+console.log(zero);
+
+function tipCalc(sum, tip = sum * 0.1) {
+  var totalBill = sum + tip;
+  return totalBill;
+}
+
+var tipNumber = tipCalc(20,10) 
+console.log(tipNumber)
+
+var title = document.querySelector(".title")
+title.innerText = "Changed!"
+var small = title.querySelector("small")
+var a = document.querySelector("a")
+a.innerText = "Coding For Everybody.com"
+
+var lis = document.querySelectorAll("li")
+lis[0].innerText = "Anything i want";
+
+var input = document.querySelector(".form-control")
+input.value = "Hehe"
+console.log(input.value)
+
+var totalClicks = 0;
+function clickMe() {
+  totalClicks++;
+  console.log("You have Clicked this btn " + totalClicks + " times")
+}
+
+var num = 100;
+function calculate() {
+  var input = document.querySelector(".form-control");
+  var inputNum = Number(input.value);
+  var totalValue = inputNum + num;
+  var h1 = document.querySelector("h1");
+  var span = h1.querySelector("span");
+  span.innerText = totalValue
+}
+
+function calculateTip() {
+  const firstInput = document.querySelector(".bill-amount");
+  let billAmount = Number(firstInput.value);
+  const secondInput = document.querySelector(".tip-percent");
+  let tipPercent = Number(secondInput.value);
+  var tipPercentAmount = Number(billAmount) / 100 * Number(tipPercent);
+  var totalBill = Number(billAmount) + Number(tipPercentAmount);
+  return totalB¡ill;
+}
+
+var number = calculateTip();
+  var totalBillEl = document.querySelector("span");
+  totalBillEl.innerText = number;
+
+console.log('calculate')
 */
+function calculateIt() {
+  var billAmount = Number(document.querySelector(".bill-amount").value);
+  var tipPercent = Number(document.querySelector(".tip-percent").value);
+  console.log(billAmount, tipPercent)
+tipPercent = tipPercent / 100;
+  var totalTip = billAmount * tipPercent;
+  var totalBill = billAmount + totalTip;
+  document.querySelectror(".span").innerText = totalBill;
+}
