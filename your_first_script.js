@@ -239,7 +239,7 @@ var number = calculateTip();
   totalBillEl.innerText = number;
 
 console.log('calculate')
-*/
+
 function calculateIt() {
   var billAmount = Number(document.querySelector(".bill-amount").value);
   var tipPercent = Number(document.querySelector(".tip-percent").value);
@@ -247,5 +247,41 @@ function calculateIt() {
 tipPercent = tipPercent / 100;
   var totalTip = billAmount * tipPercent;
   var totalBill = billAmount + totalTip;
-  document.querySelectror(".span").innerText = totalBill;
+  document.querySelector(".span").innerText = totalBill;
 }
+
+var getName = (function() {
+    return document.querySelector(".name").value
+})();
+
+(function LoadApp() { 
+    console.log("App Loading...");
+    // Load event logic here
+    console.log("App Loaded.");
+})();
+
+function getPerson(name) {
+    this.name = name;
+    this.profession = "Developer";
+    return this
+}
+
+var btn = document.querySelector(".btn")
+var totalClicks = 0;
+btn.addEventListener("click", function(event) {
+    totalClicks++;
+    document.querySelector(".span").innerText = totalClicks;
+});
+
+let nameInput = document.querySelector(".js-name");
+let nameElem = document.querySelector(".js-change-name");
+nameInput.addEventListener("input", function(event) {
+    nameElem.innerText = event.target.value;
+})
+ */
+let nameInput = document.querySelector(".js-name");
+let nameElem = document.querySelector(".js-change-name");
+function callback(event) {
+    nameElem.innerText = event.target.value;
+}
+nameInput.addEventListener("input", callback);
