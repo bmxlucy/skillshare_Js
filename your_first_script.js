@@ -278,10 +278,72 @@ let nameElem = document.querySelector(".js-change-name");
 nameInput.addEventListener("input", function(event) {
     nameElem.innerText = event.target.value;
 })
- */
+
 let nameInput = document.querySelector(".js-name");
 let nameElem = document.querySelector(".js-change-name");
 function callback(event) {
     nameElem.innerText = event.target.value;
 }
 nameInput.addEventListener("input", callback);
+
+let bgColorInput = document.querySelector(".js-bg-color");
+let textColorInput = document.querySelector(".js-text-color");
+let body = document.querySelector("body");
+bgColorInput.addEventListener("input", function(event) { 
+  let color = event.target.value;
+  switch(color) {
+    case "red":
+    case "blue":
+      body.style.backgroundColor = color;
+      break;
+    default:
+      body.style.backgroundColor = "white";
+      break
+  }
+});
+textColorInput.addEventListener("input", function(event) { 
+  body.style.color = event.target.value;
+});
+
+let bgColorInput = document.querySelector(".js-bg-color");
+let textColorInput = document.querySelector(".js-text-color");
+let fontSizeInput = document.querySelector(".js-font-size");
+let body = document.querySelector("body");
+bgColorInput.addEventListener("input", function(event) {
+  body.style.backgroundColor = event.target.value;
+});
+textColorInput.addEventListener("input", function(event) {
+  body.style.color = event.target.value;
+});
+fontSizeInput.addEventListener("input", function(event) {
+  body.style.fontSize = event.target.value + "px";
+});
+
+person = {
+  name: "Artem",
+  age: 32, 
+  cats: ["Misty", "Shadow"]
+}
+console.log(person.age);
+person["sound"] = function() {
+  console.log(this.name + " says Woof!");
+}
+person.getCats = function() {
+  alert(this.name + " has " + this.cats.length + " cats.");
+}
+
+
+for(var i=0; i<10; i++) {
+  console.log(i);
+}
+
+var names = ["Artem", "Kalob", "John", "Jane"];
+function toEmail(name) {
+  return name.toLowerCase() + "@example.com";
+}
+
+for(var i=0; i<names.length; i++) {
+  var currentName = toEmail(names[i]);
+  console.log(currentName);
+}
+ */
