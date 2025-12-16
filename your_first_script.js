@@ -346,4 +346,36 @@ for(var i=0; i<names.length; i++) {
   var currentName = toEmail(names[i]);
   console.log(currentName);
 }
- */
+
+var num = Number(prompt("Enter a number:"));
+var startingNum = 0;
+while(startingNum < num) {
+  console.log(startingNum);
+  startingNum++;
+}
+
+var ul = document.querySelector(".js-list");
+var html = "";
+var num = Number(prompt("Enter a number:"));
+var startingNum = 1;
+while(startingNum <= num) {
+  html = html + "<li>" + startingNum + "</li>"
+  startingNum++;
+}
+ul.innerHTML = html;
+
+var names = ["Artem", "Kalob", "John", "Jane"];
+names.forEach(function(name, index) {
+  console.log(index + ": " + name);
+ })
+*/ 
+
+var lis = document.querySelectorAll(".js-text");
+lis.forEach(function(node, index) { 
+  if(index >= 10) { 
+    node.remove();
+    return false;
+  }
+  node.innerText = "Item " + (index + 1);
+
+})
