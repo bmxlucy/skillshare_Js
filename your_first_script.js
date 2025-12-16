@@ -368,8 +368,7 @@ var names = ["Artem", "Kalob", "John", "Jane"];
 names.forEach(function(name, index) {
   console.log(index + ": " + name);
  })
-*/ 
-
+ 
 var lis = document.querySelectorAll(".js-text");
 lis.forEach(function(node, index) { 
   if(index >= 10) { 
@@ -379,3 +378,34 @@ lis.forEach(function(node, index) {
   node.innerText = "Item " + (index + 1);
 
 })
+
+let guessInput = document.querySelector(".guess-input");
+let body = document.querySelector("body");
+let correctNumber = 7;
+ while (correctNumber != userGuess) {
+  guessInput.addEventListener("input", function(event) { 
+  if (Number(guessInput.value) == correctNumber) {
+    body.style.backgroundColor = green;
+    return: true
+  } else {
+    body.style.backgroundColor = red;
+    alert("Try Again");
+    return: false
+  }
+});
+ }
+*/
+
+let correctNumber = 12;
+let body = document.querySelector("body");
+while (true)  {
+  userGuess = Number(prompt("Enter your Guess"));
+  if (userGuess === correctNumber) {
+    alert("correct")
+    body.style.backgroundColor = "green";
+    break;
+  } else {
+    alert("try again");
+    body.style.backgroundColor = "red";
+  }
+}
