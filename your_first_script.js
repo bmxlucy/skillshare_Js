@@ -394,7 +394,6 @@ let correctNumber = 7;
   }
 });
  }
-*/
 
 let correctNumber = 12;
 let body = document.querySelector("body");
@@ -409,3 +408,92 @@ while (true)  {
     body.style.backgroundColor = "red";
   }
 }
+
+class Person {
+  constructor(name, age, food) {
+    this.name = name;
+    this.age = Number(age)
+    this.food = food
+  }
+  makeSound() {
+    console.log(this.name + " says mmmmm to " + this.food)
+  }
+}
+
+const Artem = new Person("Artem", 32, "Spagetti")
+const Nikita = new Person("Nikita", 24, "Burgers")
+
+class Animal {
+  constructor(species, weight, height) {
+    this.species = String(species)
+    this.weight = Number(weight)
+    this.height = Number(height)
+  }
+  getInfo() {
+    console.log(
+      this.species +
+       " weighs " + this.weight +
+       " and is " + this.height + " tall") 
+  }
+  speak() {
+    console.log("I SAY A THING")
+  }
+ }
+  class Cat extends Animal {
+    constructor(species, weight, height) {
+      super(species, weight, height)
+      this.color = "Grey"
+    }
+    sleep() {
+      console.log(this.species + " id sleeping for 16 hours a day")
+      return this
+    }
+    speak() {
+      console.log("MEOWWW")
+      return this
+    }
+  }
+  class Dog extends Animal {
+    
+  }
+ //const tiger = new Animal("Tiger", 200, 36)
+ //tiger.getInfo()
+ const zephyr = new Cat("cat", 13, 13)
+ console.log(zephyr)
+ zephyr.sleep().speak().sleep()
+ */
+
+
+ //openBtn.addEventListener('click', function(event) {
+ //   modal.computedStyleMap.display = "initial"
+ //})
+ //closeBtn.addEventListener('click', function(event) {
+ //   modal.computedStyleMap.display = "none"
+ //})
+
+ class Modal {
+    constructor(title="Default title", text="Default text") {
+      this.modal = document.querySelector(".js-modal")
+      if(title !== undefined) {
+        this.modal.querySelector(".js-modal-title").innerText = title
+      }
+      if(text !== undefined) {
+        this.modal.querySelector(".js-modal-text").innerText = text
+      }
+    }
+    open() {
+      this.modal.computedStyleMap.display = "initial"
+    }
+    close() {
+      this.modal.computedStyleMap.display = "none"
+    }
+ }
+ const closeBtn = document.querySelector(".js-close-modal")
+ const openBtn = document.querySelector(".js-open-modal")
+ const modal = new Modal()
+ openBtn.addEventListener('click', function(event) {
+    modal.open
+ })
+ closeBtn.addEventListener('click', function(event) {
+    modal.close
+ })
