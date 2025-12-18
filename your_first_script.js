@@ -461,7 +461,7 @@ class Animal {
  const zephyr = new Cat("cat", 13, 13)
  console.log(zephyr)
  zephyr.sleep().speak().sleep()
- */
+
 
 
  //openBtn.addEventListener('click', function(event) {
@@ -497,3 +497,51 @@ class Animal {
  closeBtn.addEventListener('click', function(event) {
     modal.close
  })
+*/
+
+console.log(`here is string text ${varuble} continue`)
+const computer = 'computer'
+const person = {
+  'name': 'Kalob',
+  speak() {
+    console.log("I SAY WOOF")
+  },
+  computer,
+}
+
+var arr = ["Kalob", "Nathan", "Zephyr"]
+const kalob = arr[0]
+const nathan = arr[1]
+
+let [kalob, nathan, zephyr, ...rest] = arr
+var fullName = prompt("What is your FULL name?")
+let [firstName, lastName] = fullName.split(' ')
+
+const person = {
+  'first_name_for_the_user': 'Kalob',
+  'age': 30,
+  'cats': 2,
+  'food': 'pizza'
+}
+
+let {
+  first_name_for_the_user: firstName, 
+    food,
+    color = 'blue'
+} = person
+console.log("Name is ", firstName)
+console.log("Food is ", food)
+
+
+function callbackfunction() {}
+setTimeout(callbackfunction, 1000)
+
+var logger = setInterval(function() {
+  console.log("I'm running")
+}, 1000)
+
+clearInterval(logger)
+
+setTimeout(function(){
+  clearInterval(logger)
+}, 5000)
