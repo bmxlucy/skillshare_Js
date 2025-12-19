@@ -497,7 +497,7 @@ class Animal {
  closeBtn.addEventListener('click', function(event) {
     modal.close
  })
-*/
+
 
 console.log(`here is string text ${varuble} continue`)
 const computer = 'computer'
@@ -545,3 +545,72 @@ clearInterval(logger)
 setTimeout(function(){
   clearInterval(logger)
 }, 5000)
+
+let luke = {}
+
+fetch('hhtps://swapi.co/api/people/1/')
+  .then(function(response) {
+    console.log("Then #1")
+    return response.json()
+  })
+  .then(function(res){
+    console.log("Then #2")
+    luke = res
+    console.log(luke)
+  })
+  console.log("After")
+  console.log("LUKE")
+
+
+  fetch('hhtps://swapi.co/api/people/1/')
+  .then(function(response) {
+    return response.json()
+  })
+  .then(function(res){
+    luke = res
+  //const [movie1, movie2, movie3 ...movies] = luke.films
+    luke.films.forEach(function(url, index) {
+      console.log(index, url)
+    })
+  })
+ 
+
+  (function someone(one, two) {
+    return athing
+  })();
+  const kalob = function() {
+  }
+
+  function something() {
+    this
+  }
+  class NewClass {
+    function(params) {
+      this
+    }
+  }
+  const person = {
+    funcname: function() {
+      this
+    }
+  }
+
+  greet = (name, place) => `Hello ${name} ${place}`
+  
+  const hi = greet("Henry", "Canada")
+  console.log(hi)
+
+  const arr = ["JavaScript", "Python", "PHP"]
+  arr.forEach(language => {
+    console.log(language)
+  });
+
+  setTimeout(() => {
+    console.log("YAY I WAITED")
+  }, 1000)
+
+ */
+
+  const h1 = document.querySelector("h1")
+  h1.classList.add("blue")
+  h1.classList.remove("blue")
