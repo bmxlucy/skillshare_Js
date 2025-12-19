@@ -609,8 +609,21 @@ fetch('hhtps://swapi.co/api/people/1/')
     console.log("YAY I WAITED")
   }, 1000)
 
- */
-
   const h1 = document.querySelector("h1")
   h1.classList.add("blue")
   h1.classList.remove("blue")
+   */
+  let titleElem = document.querySelector(".title");
+  let title = titleElem.innerText;
+  let chars = title.split("");
+  titleElem.innerText = "";
+
+  chars.forEach((char, index) => {
+    let span = document.createElement("span");
+    span.innerText = char;
+    
+    titleElem.appendChild(span);
+    span.addEventListener("mouseover", function() {
+      span.classList.add("fade-in");
+  })  
+});
